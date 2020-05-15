@@ -1915,11 +1915,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {};
@@ -37475,8 +37470,6 @@ var render = function() {
     "div",
     { staticClass: "row justify-content-center" },
     [
-      _vm._m(0),
-      _vm._v(" "),
       _c(
         "transition",
         { attrs: { name: "slide-fade", mode: "out-in" } },
@@ -37487,18 +37480,7 @@ var render = function() {
     1
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("header", [
-      _c("div", { staticClass: "jumbotron-fluid pb-3 pt-4 px-5 px-md-3" }, [
-        _c("h4", [_vm._v("eto va en todas las paginas")])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -37527,8 +37509,87 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-8" }, [
-      _c("h4", { staticClass: "text-center" }, [_vm._v("lista de twitter")])
+    return _c("div", { staticClass: "col-12 col-md-8 mt-4" }, [
+      _c("div", { staticClass: "card mt-4" }, [
+        _c("div", { staticClass: "card-header" }, [
+          _vm._v("\n\t    \tEscribe tu twits\n\t \t")
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "card-body d-flex justify-content-center flex-wrap" },
+          [
+            _c("textarea", {
+              staticClass: "form-control col-12",
+              attrs: { placeholder: "Escribe lo que piensas", name: "tweets" }
+            })
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-footer" }, [
+          _c("button", { staticClass: "btn btn-outline-success col-4 mt-3" }, [
+            _vm._v("Publicar")
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "py-4 col-12 my-bg mt-4" }, [
+        _c("div", { staticClass: "border-bottom  py-4 border-light" }, [
+          _c("p", [_vm._v("Gustavo Diosa")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius consectetur, hic laboriosam nemo voluptatibus ab iusto eaque, saepe itaque ipsam sapiente perspiciatis. Repellendus ducimus accusamus, voluptate nihil quibusdam explicabo incidunt?"
+            )
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "text-muted" }, [
+            _vm._v("publicado el 14/02/2020")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "border-bottom  py-4 border-light" }, [
+          _c("p", [_vm._v("Gustavo Diosa")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius consectetur, hic laboriosam nemo voluptatibus ab iusto eaque, saepe itaque ipsam sapiente perspiciatis. Repellendus ducimus accusamus, voluptate nihil quibusdam explicabo incidunt?"
+            )
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "text-muted" }, [
+            _vm._v("publicado el 14/02/2020")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "border-bottom  py-4 border-light" }, [
+          _c("p", [_vm._v("Gustavo Diosa")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius consectetur, hic laboriosam nemo voluptatibus ab iusto eaque, saepe itaque ipsam sapiente perspiciatis. Repellendus ducimus accusamus, voluptate nihil quibusdam explicabo incidunt?"
+            )
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "text-muted" }, [
+            _vm._v("publicado el 14/02/2020")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "border-bottom py-4 border-light" }, [
+          _c("p", [_vm._v("Gustavo Diosa")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius consectetur, hic laboriosam nemo voluptatibus ab iusto eaque, saepe itaque ipsam sapiente perspiciatis. Repellendus ducimus accusamus, voluptate nihil quibusdam explicabo incidunt?"
+            )
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "text-muted" }, [
+            _vm._v("publicado el 14/02/2020")
+          ])
+        ])
+      ])
     ])
   }
 ]
