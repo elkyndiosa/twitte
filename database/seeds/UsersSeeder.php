@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class TweetsSeeder extends Seeder
+class UsersSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class TweetsSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Tweets::class,100)->create();
+        factory(App\User::class,20)->create();
     }
 }
