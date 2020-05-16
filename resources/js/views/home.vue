@@ -21,6 +21,7 @@
                     <button class="btn btn-outline-danger" @click="destroy(tweet.id)">eliminar</button>
 				</div>
 			</div>
+            <InfiniteLoading @infinite="infiniteHandler"></InfiniteLoading>
 		</div>
 	</div>
 </template>
@@ -30,7 +31,8 @@
             return{
                 tweets: '',
                 current_user: '',
-                tweet_content: ''
+                tweet_content: '',
+                page: 1
             };
         },
         created(){
@@ -52,20 +54,37 @@
             destroy(id){
             	let url = 'http://localhost/Twitter/public/delete/'+id;
                 axios.get(url).then(response => {
+                    this.page= 1;
                     this.getTweets();
                 }).catch(error =>{
                     console.log(error.response);
                 });
             },
             getTweets(){
-                let url = 'http://localhost/Twitter/public/index';
+                let url = 'http://localhost/Twitter/public/index?page='+this.page;
                 axios.get(url).then(response => {
-                   this.tweets = response.data.tweets;
+                   this.tweets = response.data.tweets.data;
                    this.current_user = response.data.current_user;
                    console.log(this.current_user);
                 }).catch(error =>{
                     console.log(error.response);
                 });
+            },
+            infiniteHandler($state) {
+                this.page++
+                let url = 'http://localhost/Twitter/public/index?page='+this.page;
+                axios.get(url)
+                .then(response => {
+                    let tweetss = response.data.tweets.data;
+
+                    if(tweetss.length){
+                        this.tweets = this.tweets.concat(tweetss);
+                        $state.loaded();
+                    }else{
+                        $state.complete();
+                    }
+                })
+
             }
         }
     }

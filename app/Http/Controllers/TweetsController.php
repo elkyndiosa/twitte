@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class TweetsController extends Controller{
     public function index(){
-        $tweets = Tweets::orderBy('id', 'DESC')->get();
+        $tweets = Tweets::orderBy('id', 'DESC')->paginate(5);
         $user_current = \Auth::user()->id;
         foreach($tweets as $tweet){
             // $tweet->user = $tweet->user();
