@@ -7,24 +7,19 @@ export default new Router({
 			path: '/twitter/public/',
 			name: 'home',
 			component: require('./views/home').default
+		},
+		{
+			path: '/twitter/public/show/:id',
+			name: 'show',
+			component: require('./views/user').default,
+			props: true
+		},
+		{
+			path: '/twitter/public/edit/:tweet',
+			name: 'edit',
+			component: require('./views/edit').default,
+			props: true
 		}
-		// {
-		// 	path: '/tienda-prueba/public/add-store',
-		// 	name: 'add-store',
-		// 	component: require('./views/add-store').default
-		// },
-		// {
-		// 	path: '/tienda-prueba/public/store/:id',
-		// 	name: 'store',
-		// 	component: require('./views/store').default,
-		// 	props: true
-		// },
-		// {
-		// 	path: '/tienda-prueba/public/add-product/:id',
-		// 	name: 'add-product',
-		// 	component: require('./views/add-product').default,
-		// 	props: true
-		// }
 	],
 	mode: 'history'
 })
